@@ -1,0 +1,324 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #4b362d;  
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header .logo img {
+  max-height: 50px;
+  transition: transform 0.3s ease-in-out; /* Add transition effect */
+}
+
+header .logo img:hover {
+  transform: scale(1.1); /* Zoom in by 10% */
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 80px; 
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #918171;  
+  font-size: 20px; 
+  transition: 0.2s; 
+}
+
+/* hero section css the one that has an image as a backdrop */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../assets/img/home_background.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin: 0 0 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 0 0 30px;
+  max-width: 800px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a4c3c;
+  color: white;
+}
+
+button:hover {
+  background-color: #3c1c0a;
+}
+
+/* Services section */
+#services {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+}
+
+.services-container h2 {
+  font-size: 36px;
+  color: #6a4c3c;
+  margin-bottom: 20px;
+}
+
+.services-container p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  flex: 1 1 calc(33% - 20px);
+  min-width: 250px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  font-size: 24px;
+  color: #6a4c3c;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* About Section */
+.about {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;  
+}
+
+/* Title and Subtitle Styles */
+.about h2,
+.about h3 {
+  color: #6a4c3c;    
+  margin-bottom: 20px;
+}
+
+.about h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.about h3 {
+  font-size: 1.8em;
+}
+
+.about p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+/* Core Values Section */
+.about ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.about ul li {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 30px;
+  color: #6a4c3c;
+  margin-top: 40px;
+  text-decoration: underline;
+}
+
+/* footer */
+footer {
+  background-color: #4b362d;  
+  color: white;
+  text-align: center;
+  padding: 10px 0;  
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 100%;  
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .about h2 {
+      font-size: 2em;
+  }
+
+  .about h3 {
+      font-size: 1.5em;
+  }
+
+  .about p,
+  .about ul li {
+      font-size: 1em;
+  }
+
+  .about ul {
+      grid-template-columns: 1fr;   
+      padding: 0 10px;
+  }
+
+  .about ul li {
+      margin-bottom: 20px;
+  }
+
+  .about .container {
+      gap: 50px;  
+  }
+}
+
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #6a4c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background-color: #786867;
+}
+
+/* Blur effect */
+#home.blurred {
+  filter: blur(5px);
+}
+
+/* Modal link */
+.modal-content a {
+  color: #6a4c3c;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
